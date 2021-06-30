@@ -13,7 +13,10 @@ public class MaxMinPath {
     }
     private void dfs(int i, int j, int[][] grid, Queue<Integer> path) {
         if(!isVisited[i][j]) {
-            isVisited[i][j] = true;
+            if(i == grid.length -1 && j == grid[0].length -1) {
+                path.
+            }
+            this.isVisited[i][j] = true;
             //查看四周没有被访问过的找到一个最大的方向进行检索
             int maxX = -1 ,maxY = -1;
             int maxValue = -1;
@@ -30,7 +33,6 @@ public class MaxMinPath {
             }
             path.add(grid[i][j]);
             dfs(maxX,maxY,grid,path);
-            
         }
         
     }
