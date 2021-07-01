@@ -1,9 +1,22 @@
 package chapter2_dsu.excersice;
 
 import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Deque;
+import java.util.List;
 
 public class MaxMinPath {
+    class Pair {
+        public int x,y;
+    }
+    class Triple {
+        public Triple(int i, int j, int k) {
+            this.indexX = i;
+            this.indexY = j;
+            this.value = k;
+        }
+        public int indexX,indexY,value;
+    }
     private boolean [][] isVisited = null;
     // movX和moveY组成四个方向
     private int[] moveX = {-1,1,0,0};
@@ -43,5 +56,16 @@ public class MaxMinPath {
     private boolean inArea(int[][] grid, int r, int c) {
         return 0 <= r && r < grid.length
                     && 0 <= c && c < grid[0].length;
+    }
+    private List<Pair> sortByValue(int[][] grid) {
+        //第一步： 将数组变成[(index x,index y, value)...]的形式
+        Triple [][] gridIndex = new Triple[grid.length][grid[0].length];
+        for(int i=0;i<grid.length;i++) {
+            for(int j=0;j<grid[0].length;j++) {
+                gridIndex[i][j] = new Triple(i,j,grid[i][j]);
+            }
+        }
+        //第二步，对二维数组进行排序
+        Arrays.s
     }
 }
