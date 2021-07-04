@@ -19,7 +19,7 @@ public class SentenceSimilarity {
         Map<String, Integer> maps = new HashMap<String,Integer>();
         int index = 0;
         Dsu d = new Dsu();
-        d.makeset(similarPairs.size()*2);
+        d.makeSet(similarPairs.size()*2);
         for(List<String> pair: similarPairs) {
             int k,v;
             //当集合中不存在相应的string时

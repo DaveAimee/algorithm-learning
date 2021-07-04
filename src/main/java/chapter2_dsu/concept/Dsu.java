@@ -9,7 +9,7 @@ public class Dsu {
      * 创建新的并查集,size为并查集的大小
      * @param size
      */
-    public void makeset(int size) {
+    public void makeSet(int size) {
         this.uset = new int[size];
         for(int i = 0 ;i < size; i++) {
             this.uset[i] = i;
@@ -17,6 +17,11 @@ public class Dsu {
         this.setNums = this.uset.length;
     }
     
+    public void cleanSet() {
+        for(int i = 0 ;i < this.uset.length; i++) {
+            this.uset[i] = i;
+        }
+    }
     /**
      * 将元素x和y所在的集合合并
      * @param x
@@ -53,7 +58,7 @@ public class Dsu {
     }
     public static void main(String[] args) {
         Dsu d = new Dsu();
-        d.makeset(10);
+        d.makeSet(10);
         d.unionSet(0, 1);
         d.unionSet(2, 3);
         d.unionSet(4, 5);

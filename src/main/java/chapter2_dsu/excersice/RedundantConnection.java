@@ -5,7 +5,7 @@ import chapter2_dsu.concept.Dsu;
 public class RedundantConnection {
     public int[] findRedundantConnection(int[][] edges) {
         Dsu d = new Dsu();
-        d.makeset(edges.length + 1);
+        d.makeSet(edges.length + 1);
         for (int arrs[]: edges) {
             if(d.find(arrs[0]) == d.find(arrs[1])) {
                 return arrs;

@@ -5,7 +5,7 @@ import chapter2_dsu.concept.*;
 public class FriendCircle {
     public int findCircleNum(int[][] matrix) {
         Dsu d = new Dsu();
-        d.makeset(matrix.length);
+        d.makeSet(matrix.length);
         for (int i=0;i<matrix.length;i++) {
             for (int j=0;j<matrix[0].length;j++) {
                 if(i < j && matrix[i][j] == 1) {
