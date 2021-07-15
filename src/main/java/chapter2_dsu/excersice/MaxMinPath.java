@@ -1,11 +1,7 @@
 package chapter2_dsu.excersice;
-
-import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
-
 import chapter2_dsu.concept.Dsu;
 
 public class MaxMinPath {
