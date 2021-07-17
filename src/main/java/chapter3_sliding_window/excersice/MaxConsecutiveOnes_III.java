@@ -1,5 +1,6 @@
 package chapter3_sliding_window.excersice;
 //important
+//leetcode 1004: https://leetcode-cn.com/problems/max-consecutive-ones-iii/
 public class MaxConsecutiveOnes_III {
     public int longestOnes(int[] nums, int k) {
         if(nums.length == 0 || nums == null) {

@@ -1,7 +1,7 @@
 package chapter4_prefix_sum.excersice;
 
 import chapter4_prefix_sum.concept.PrefixSum;
-
+//leetcode523: https://leetcode-cn.com/problems/continuous-subarray-sum/
 public class ContinuousSubArraySum {
     public boolean checkSubarraySum(int[] nums, int k) {
         PrefixSum p = new PrefixSum();

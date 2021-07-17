@@ -1,7 +1,7 @@
 package chapter4_prefix_sum.excersice;
 
 import chapter4_prefix_sum.concept.PrefixSum;
-
+//leetcode560: https://leetcode-cn.com/problems/subarray-sum-equals-k/
 public class SubarraySumEqualsK {
     public int subarraySum(int[] nums, int k) {
         PrefixSum p = new PrefixSum();

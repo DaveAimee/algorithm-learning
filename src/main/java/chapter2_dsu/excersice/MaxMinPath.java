@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import chapter2_dsu.concept.Dsu;
-
+//leetcode1102(vip): https://leetcode-cn.com/problems/path-with-maximum-minimum-value/
 public class MaxMinPath {
 
     class Pair {

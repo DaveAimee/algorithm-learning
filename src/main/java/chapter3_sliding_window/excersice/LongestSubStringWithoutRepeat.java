@@ -2,7 +2,7 @@ package chapter3_sliding_window.excersice;
 
 import java.util.HashSet;
 import java.util.Set;
-
+//leetcode3: https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 public class LongestSubStringWithoutRepeat {
     public int lengthOfLongestSubstring(String s) {
         if(s.length() == 0 || s == null) {

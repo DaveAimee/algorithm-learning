@@ -1,5 +1,5 @@
 package chapter3_sliding_window.excersice;
-
+//leetcode209: https://leetcode-cn.com/problems/minimum-size-subarray-sum/
 public class EqualSubstringsWithinBudget {
     public int equalSubstring(String s, String t, int maxCost) {
         int left = 0, right = 0;

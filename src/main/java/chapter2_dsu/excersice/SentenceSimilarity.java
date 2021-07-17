@@ -6,7 +6,7 @@ import java.util.Map;
 
 import chapter2_dsu.concept.Dsu;
 
-// 题目链接： https://leetcode-cn.com/problems/sentence-similarity-ii/
+// leetcode737(vip): https://leetcode-cn.com/problems/sentence-similarity-ii/
 public class SentenceSimilarity {
     
     public boolean areSentencesSimilarTwo(String[] sentence1, String[] sentence2, List<List<String>> similarPairs) {

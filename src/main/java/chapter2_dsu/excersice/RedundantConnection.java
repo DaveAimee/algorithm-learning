@@ -1,7 +1,7 @@
 package chapter2_dsu.excersice;
 
 import chapter2_dsu.concept.Dsu;
-
+//leetcode684: https://leetcode-cn.com/problems/redundant-connection/
 public class RedundantConnection {
     public int[] findRedundantConnection(int[][] edges) {
         Dsu d = new Dsu();

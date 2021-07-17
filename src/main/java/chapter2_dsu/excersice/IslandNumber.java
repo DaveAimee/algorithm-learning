@@ -1,6 +1,6 @@
 package chapter2_dsu.excersice;
 
-// 题目链接：https://leetcode-cn.com/problems/number-of-islands/
+// leetcode200: https://leetcode-cn.com/problems/number-of-islands/
 public class IslandNumber {
     private int[] moveX = {-1, 1, 0, 0};
     private int[] moveY = {0, 0, -1, 1};

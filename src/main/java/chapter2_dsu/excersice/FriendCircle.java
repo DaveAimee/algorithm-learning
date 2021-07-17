@@ -1,7 +1,7 @@
 package chapter2_dsu.excersice;
 
 import chapter2_dsu.concept.*;
-
+//leetcode547: https://leetcode-cn.com/problems/friend-circles/
 public class FriendCircle {
     public int findCircleNum(int[][] matrix) {
         Dsu d = new Dsu();
