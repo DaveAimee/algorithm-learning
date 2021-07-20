@@ -10,6 +10,18 @@ public class Search2DMatrix {
             startFromRight--;
         }
         //将矩阵进行转置
+        int [][] newMatrix = new int[matrix[0].length][matrix.length];
+        for(int i=0;i<matrix.length;i++) {
+            for(int j=0;j<matrix[0].length;j++) {
+                newMatrix[j][i] = matrix[i][j];
+            }
+        }
+        boolean result = true;
+        //在前startFromRight个子数组中寻找target
+        for(int i=0;i<startFromRight;i++) {
+            result &= binarySearch(matrix[i], target);
+        }
+        return result;
     }
     public boolean binarySearch(int[] nums, int target) {
         int left = 0;
