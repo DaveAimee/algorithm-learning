@@ -54,5 +54,21 @@ class Pair{
 }
 ```
 
+#### 使用Arrays.sort排序多维数组或自定义对象
+
+```java
+Arrays.sort(points, new Comparator<int[]>() {
+            public int compare(int[] point1, int[] point2) {
+                if (point1[1] > point2[1]) {
+                    return 1;
+                } else if (point1[1] < point2[1]) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        });
+```
+
 
 
