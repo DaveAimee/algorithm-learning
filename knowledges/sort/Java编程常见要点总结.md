@@ -57,6 +57,7 @@ class Pair{
 #### 使用Arrays.sort排序多维数组或自定义对象
 
 ```java
+//排序数组：points=new int [][] {{1,2},{3,4}};
 Arrays.sort(points, new Comparator<int[]>() {
             public int compare(int[] point1, int[] point2) {
                 if (point1[1] > point2[1]) {
@@ -68,6 +69,15 @@ Arrays.sort(points, new Comparator<int[]>() {
                 }
             }
         });
+//排序自定义类
+class Dog {
+public int age;
+public String name;
+public Dog(int age, String name) {
+    super();
+    this.age = age;
+    this.name = name;
+}
 ```
 
 
