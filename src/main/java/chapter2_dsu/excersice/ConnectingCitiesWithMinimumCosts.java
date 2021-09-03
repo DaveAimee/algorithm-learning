@@ -2,7 +2,7 @@ package chapter2_dsu.excersice;
 
 import java.util.Arrays;
 import java.util.Comparator;
-
+//leetcode1135: https://leetcode-cn.com/problems/connecting-cities-with-minimum-cost/
 public class ConnectingCitiesWithMinimumCosts {
     //记录两点是否联通所用的结构
     private int[] parents;

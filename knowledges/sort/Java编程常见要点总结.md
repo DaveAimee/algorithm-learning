@@ -78,6 +78,40 @@ public Dog(int age, String name) {
     this.age = age;
     this.name = name;
 }
+//Comparator用法
+Comparator<Integer> comp = new Comparator<Integer> () {
+    @Override
+    public int compare(Integer x, Integer y) {
+        if(colorNums[colors[x]] < colorNums[colors[x]]) {
+            return -1;
+        }
+        else if(colorNums[colors[x]] == colorNums[colors[x]]){
+            return 0;
+        }
+        else {
+            return 1;
+        }
+    }
+};
+```
+
+#### 栈的声明和使用
+
+```java
+数组：Arrays.sort()
+集合：Collections.sort();sort只能对单列集合使用，所以如果想对map进行排序，将Entry作为集合放入到list即可。
+队列：LinkedList queue = new LinkedList();为了便于记忆，不使用接口类型进行声明，入队方法offer()，出队方法poll()
+栈：LinkedList stack = new LinkedList();添加元素push()，删除元素pop();作为队列和栈使用时peek()方法都可以查看队头或栈顶元素
+最小/最大堆：PriorityQueue queue = new PriorityQueue();队头元素始终是最大/最小值，由比较器进行初始化决定规则
+循环中删除集合元素：
+Iterator<String> iterator = list.iterator();
+while (iterator.hasNext()) {
+String item = iterator.next();
+if (isRemovable()) {
+iterator.remove();
+}
+}
+
 ```
 
 
