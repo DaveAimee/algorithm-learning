@@ -10,4 +10,10 @@ public class CorporateFlightBookingsTest {
         CorporateFlightBookings c = new CorporateFlightBookings();
         assertArrayEquals(c.corpFlightBookings(new int[][] {{1,2,10},{2,3,20},{2,5,25}}, 5),new int[] {10,55,45,25,25});
     }
+
+    @Test
+    public void testCorpFlightBookingsMethod2() {
+        CorporateFlightBookings c = new CorporateFlightBookings();
+        assertArrayEquals(c.corpFlightBookingsMethod2(new int[][] {{1,2,10},{2,3,20},{2,5,25}}, 5),new int[] {10,55,45,25,25});
+    }
 }

@@ -72,9 +72,31 @@ public class IslandNumber {
         return 0 <= r && r < grid.length 
                 && 0 <= c && c < grid[0].length;
     }
-    public static void main(String[] args) {
-        IslandNumber landnumber = new IslandNumber();
-        int res = landnumber.numIslands(new char [][] {{'1','1','0','0'},{'0','0','1','1'}});
-        System.out.println("res is" + res);
+    boolean[][] visited = null;
+    public int numIslandsDfsMethod(char[][] grid) {
+        int count=0;
+        visited = new boolean[grid.length][grid[0].length];
+        for(int i=0;i<grid.length;i++) {
+            for(int j=0;j<grid[0].length;j++) {
+                if(grid[i][j]=='1') {
+                    dfs(grid,i,j);
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+    private void dfs(char[][] grid, int i, int j) {
+        if(!visited[i][j] && grid[i][j]=='1') {
+           visited[i][j]=true;
+           grid[i][j]='0';
+           for(int k=0;k<4;k++) {
+               int newX = i + moveX[k];
+               int newY = j + moveY[k];
+               if(inArea(grid, newX, newY)) {
+                   dfs(grid,newX,newY);
+               }
+           }
+        }
     }
 }

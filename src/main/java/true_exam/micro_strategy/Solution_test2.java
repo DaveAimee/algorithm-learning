@@ -1,4 +1,4 @@
-package true_exam.strategy_exam;
+package true_exam.micro_strategy;
 
 public class Solution_test2 {
     //method1

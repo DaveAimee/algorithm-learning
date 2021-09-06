@@ -1,20 +1,44 @@
 package chapter2_dsu.excersice;
 
-import chapter2_dsu.concept.Dsu;
+
 //leetcode684: https://leetcode-cn.com/problems/redundant-connection/
 public class RedundantConnection {
+    private int[] parents = null;
     public int[] findRedundantConnection(int[][] edges) {
-        Dsu d = new Dsu();
-        d.makeSet(edges.length + 1);
+
+        makeSet(edges.length + 1);
         for (int arrs[]: edges) {
-            if(d.find(arrs[0]) == d.find(arrs[1])) {
+            if(find(arrs[0]) == find(arrs[1])) {
                 return arrs;
             }
             else {
-                d.unionSet(arrs[0], arrs[1]);
+                unionSet(arrs[0], arrs[1]);
             }
         }
         return new int [] {-1,-1};
+    }
+    private void makeSet(int maxSize) {
+        parents = new int[maxSize];
+        for(int i=0;i<maxSize;i++) {
+            parents[i]=i;
+        }
+    }
+    private int find(int x) {
+        if(x==parents[x]) {
+            return x;
+        }
+        else {
+            parents[x] = find(parents[x]);
+            return parents[x];
+        }
+    }
+    private void unionSet(int x,int y) {
+        if(find(x)==find(y)) {
+            return;
+        }
+        int parent_x = find(x);
+        int parent_y = find(y);
+        parents[parent_x]=parent_y;
     }
     public static void main(String[] args) {
         RedundantConnection r = new RedundantConnection();

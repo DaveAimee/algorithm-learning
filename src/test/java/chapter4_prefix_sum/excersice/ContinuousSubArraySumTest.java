@@ -11,4 +11,10 @@ public class ContinuousSubArraySumTest {
 
         assertEquals(c.checkSubarraySum(new int[] {23,2,4,6,7}, 6),true);
     }
+
+    @Test
+    public void testCheckSubarraySumMethod2() {
+        ContinuousSubArraySum c = new ContinuousSubArraySum();
+        assertEquals(true, c.checkSubarraySumMethod2(new int[] {5,0,0,0}, 3));
+    }
 }

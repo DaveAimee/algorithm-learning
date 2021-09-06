@@ -19,4 +19,26 @@ public class MinimumSizeSubArraySum {
         }
         return min == Integer.MAX_VALUE? 0: min;
     }
+    public int minSubArrayLenMethod2(int target, int[] nums) {
+        if(nums.length==0) {
+            return 0;
+        }
+        int start = 0;
+        int end = 0;
+        int sum = 0;
+        int minLen = Integer.MAX_VALUE;
+        while(start<=end && end<nums.length) {
+            if(sum<target) {
+                sum += nums[end];
+                end++;
+            }
+            while(sum>=target) {
+                minLen=Math.min(minLen,end-start);
+                sum -= nums[start];
+                start++;
+            }
+        }
+        return minLen;
+    }
+
 }

@@ -1,4 +1,4 @@
-package true_exam.strategy_exam;
+package true_exam.micro_strategy;
 
 class Node {
     Node left, right;

@@ -24,4 +24,26 @@ public class LongestSubStringWithoutRepeat {
         }
         return maxLength;
     }
+
+    public int lengthOfLongestSubstringMethod2(String s) {
+        if(s==null || s.equals("")) {
+            return 0;
+        }
+        Set<Character> charSet = new HashSet<>();
+        int i=0;
+        int j=0;
+        int max_len = Integer.MIN_VALUE;
+        while(i<=j && j<s.length()) {
+            if(!charSet.contains(s.charAt(j))) {
+                charSet.add(s.charAt(j));
+                j++;
+                max_len=Math.max(max_len,j-i);
+            }
+            else {
+                charSet.remove(s.charAt(i));
+                i++;
+            }
+        }
+        return max_len==Integer.MIN_VALUE?1:max_len;
+    }
 }

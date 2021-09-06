@@ -6,8 +6,8 @@ public class StockSpanner {
     Stack<Integer> prices, weights;
 
     public StockSpanner() {
-        prices = new Stack();
-        weights = new Stack();
+        prices = new Stack<>();
+        weights = new Stack<>();
     }
 
     public int next(int price) {
