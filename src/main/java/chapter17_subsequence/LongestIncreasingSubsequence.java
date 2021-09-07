@@ -3,7 +3,7 @@ package chapter17_subsequence;
 import java.util.Arrays;
 
 public class LongestIncreasingSubsequence {
-    int[] LIS(int[] arr) {
+    public int[] LIS(int[] arr) {
         int[] dp = new int[arr.length]; //设置数组长度大小的动态规划辅助数组
         Arrays.fill(dp, 1);
         int max = 0;
@@ -26,6 +26,7 @@ public class LongestIncreasingSubsequence {
         return res;
     }
     public static void main(String[] args) {
-        
+        LongestIncreasingSubsequence sol = new LongestIncreasingSubsequence();
+        sol.LIS(new int[] {2,1,5,3,6,4,8,9,7}); 
     }
 }
